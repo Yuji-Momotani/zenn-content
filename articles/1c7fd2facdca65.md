@@ -35,7 +35,10 @@ SPA とだいたい同意義になるが、違いとしては、SPA はアプリ
 
 #### CSR のイメージ
 
-![CSRイメージ](images/1c7fd2facdca65/csr_image.png)
+![CSRイメージ](/images/1c7fd2facdca65/csr_image.png)
+
+- Web サーバーより各ファイルを落としてきた後、クライアント側で JavaScript によって、HTML をレンダリングする。
+- データフェッチや更新の場合、API サーバーとのやり取りはクライアントが直接行う。
 
 #### CSR に最適なアプリケーション例
 
@@ -62,7 +65,10 @@ Next.js は基本的には SSR もしくは SG のレンダリングとなる。
 
 #### SSR のイメージ
 
-![SSR](images/1c7fd2facdca65/ssr_image.png)
+![SSR](/images/1c7fd2facdca65/ssr_image.png)
+
+- リクエスト毎に Web サーバーでレンダリングし、それをクライアントに返す。
+- データフェッチや更新の場合、API サーバーとのやり取りは Web サーバー側（Node.js）で行う。
 
 #### SSR に最適なアプリケーション例
 
@@ -88,7 +94,9 @@ Next.js は基本的には SSR もしくは SG のレンダリングとなる。
 
 #### SG のイメージ
 
-![SGイメージ](images/1c7fd2facdca65/sg_image.png)
+![SGイメージ](/images/1c7fd2facdca65/sg_image.png)
+
+- ビルド時にレンダリングし、それをクライアントに返す。よって、データフェッチはビルド時のみ
 
 #### SG に最適なアプリケーション例
 
@@ -115,9 +123,14 @@ Next.js は基本的には SSR もしくは SG のレンダリングとなる。
 
 #### ISR のイメージ
 
-![ISRイメージ1](images/1c7fd2facdca65/isr_image1.png)
+![ISRイメージ1](/images/1c7fd2facdca65/isr_image1.png)
 
-![ISRイメージ2](images/1c7fd2facdca65/isr_image2.png)
+- ビルド時にレンダリングし、それをクライアントに返す。ビルド時のみデータフェッチ
+- 一定時間経過後にリクエストがあった場合は、再ビルド。
+
+以下、各時間軸でみる ISR
+
+![ISRイメージ2](/images/1c7fd2facdca65/isr_image2.png)
 
 - 20 秒時点でデータの更新がかかる。
 - 40 秒時点でリクエストが来ても更新されていないページを返す。
