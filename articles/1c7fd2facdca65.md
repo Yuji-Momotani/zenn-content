@@ -2,7 +2,7 @@
 title: "React、Next.jsのレンダリングパターンまとめ"
 emoji: "🕌"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: []
+topics: ["React", "Next.js"]
 published: true
 ---
 
