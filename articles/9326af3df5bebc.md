@@ -6,45 +6,6 @@ topics: ["slack", "rss", "IFTTT"]
 published: true
 ---
 
-<!-- ## アプリの追加
-
-![alt text](/images/9326af3df5bebc/image1.png)
-
-![alt text](/images/9326af3df5bebc/image2.png)
-
-- 追加ボタン押下後、ブラウザに遷移
-
-![alt text](/images/9326af3df5bebc/image3.png)
-
-- Slack に追加
-
-![alt text](/images/9326af3df5bebc/image4.png)
-
-- フィード URL 追加
-- 登録するチャンネルを選択
-
-→「このフィードを購読する」
-
-## Slack 上から RSS アプリの設定、確認など
-
-- フィード追加
-
-```
-/feed subscribe <フィード url>
-```
-
-- フィードのリスト
-
-```
-/feed list
-```
-
-- フィードの削除
-
-```
-/feed remove <フィードID>
-``` -->
-
 # 概要
 
 IFTTT と RSS を使用して特定の文字でフィルタリングした記事のみを Slack に通知する。
